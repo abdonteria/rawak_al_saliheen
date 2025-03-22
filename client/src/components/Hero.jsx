@@ -4,6 +4,9 @@ import Hero2 from "../assets/images/Hero4.jpg";
 import Hero3 from "../assets/images/hero5.jpg";
 import { MdOutlineDateRange } from "react-icons/md";
 import { MdOutlineCallReceived } from "react-icons/md";
+import smHeroImage2 from "../assets/images/hero_image_2.jpg";
+import smHeroImage3 from "../assets/images/hero_image_3.jpg";
+import smHeroImage4 from "../assets/images/hero_image_4.jpg";
 
 export default function Hero() {
   return (
@@ -47,15 +50,26 @@ export default function Hero() {
               نهمل الماضي ايضا
             </p>
           </div>
-          <div className="overflow-hidden grid grid-rows-2 lg:grid-cols-2 w-full gap-5 mt-3 lg:h-[35vh]">
+          <div className="overflow-hidden lg:grid grid-rows-2 hidden lg:grid-cols-2 w-full gap-5 mt-3 lg:h-[35vh]">
             {[Hero2, Hero3].map((ele, i) => [
               <img
                 key={i}
-                className="rounded-xl border lg:h-[35vh] sm:h-[40vh] md:h-[50vh] h-[30vh] w-full"
+                className="rounded-xl bg-cover border lg:h-[35vh] sm:h-[40vh] md:h-[50vh] h-[30vh] w-full"
                 src={ele}
                 alt="."
               />,
             ])}
+          </div>
+          <div className="overflow-hidden grid grid-cols-2 sm:grid-cols-3 space-y-7 mt-3">
+            {[smHeroImage2, smHeroImage3, smHeroImage4].map((ele, i) => (
+              <div className="" key={i}>
+                <img
+                  src={ele}
+                  alt=".image"
+                  className="md:h-[12rem] md:w-[12rem] w-[10rem] h-[10rem] lg:hidden bg-cover bg-center rounded-lg border mx-auto"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

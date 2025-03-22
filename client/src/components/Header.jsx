@@ -7,7 +7,7 @@ export default function Header() {
   const [isOPen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full shadow-md  rounded-b-xl">
+    <div className="w-full shadow-md rounded-b-xl">
       <nav className="container flex items-center justify-between mx-auto py-3 lg:px-0 px-6 relative">
         <div className="w-[5rem] h-[5rem]">
           <img src={logo} alt="logo" className="w-full h-full" />
