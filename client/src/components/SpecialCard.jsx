@@ -1,4 +1,6 @@
 import { FaRegHeart } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { containerHandler } from "../utils/farmermotionContainer";
 
 export default function SpecialCard({ h1, title, paragraph, img, boxes }) {
   const handleboxes = (boxes) => {
@@ -23,8 +25,14 @@ export default function SpecialCard({ h1, title, paragraph, img, boxes }) {
   const boxElements = handleboxes(boxes); // ✅ استدعاء الدالة هنا
 
   return (
-    <div className="mx-auto px-4">
-      <div className="container mx-auto flex items-center w-full justify-between bg-black rounded-2xl">
+    <motion.div
+      variants={containerHandler(0.5, "RIGHT")}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      className="mx-auto px-4"
+    >
+      <div className="container mx-auto flex items-center w-full justify-between bg-black rounded-2xl cursor-pointer hover:shadow-lg transition hover:translate-y-[-10px]">
         <div className="rounded-2xl sm:block hidden w-[18rem]">
           <img
             src={img}
@@ -59,6 +67,6 @@ export default function SpecialCard({ h1, title, paragraph, img, boxes }) {
           </section>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
