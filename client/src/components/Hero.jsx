@@ -7,6 +7,7 @@ import { MdOutlineCallReceived } from "react-icons/md";
 import smHeroImage2 from "../assets/images/hero_image_2.jpg";
 import smHeroImage3 from "../assets/images/hero_image_3.jpg";
 import smHeroImage4 from "../assets/images/hero_image_4.jpg";
+import smHeroImage5 from "../assets/images/hero_image_5.jpg";
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         <div className="flex flex-col  items-start">
           <h2 className="text-teal-500 text-xl font-bold">رواق الصالحين</h2>
           <p className="md:text-6xl text-5xl font-bold leading-[10vh]">
-            مركز تحفيظ القرءان <br />
+            مركز تحفيظ القرآن <br />
             بالتجويد وتعليم علومه المباركة
           </p>
           <div className="flex xl:flex-col justify-between items-center xl:items-start w-full">
@@ -45,7 +46,7 @@ export default function Hero() {
               عن طريقة التحفيظ
             </h1>
             <p className="md:text-2xl text-xl font-semibold text-white">
-              ننتهج طريقة مميزة في حفظ وتعليم القرءان الكريم حيث اننا نركز علي
+              ننتهج طريقة مميزة في حفظ وتعليم القرآن الكريم حيث اننا نركز علي
               التجويد بشكل كبير ونلقن المتعلم بعناية عند حفظه للوح الجديد ولا
               نهمل الماضي ايضا
             </p>
@@ -60,16 +61,18 @@ export default function Hero() {
               />,
             ])}
           </div>
-          <div className="overflow-hidden grid grid-cols-2 sm:grid-cols-3 space-y-7 mt-3">
-            {[smHeroImage2, smHeroImage3, smHeroImage4].map((ele, i) => (
-              <div className="" key={i}>
-                <img
-                  src={ele}
-                  alt=".image"
-                  className="md:h-[12rem] md:w-[12rem] w-[10rem] h-[10rem] lg:hidden bg-cover bg-center rounded-lg border mx-auto"
-                />
-              </div>
-            ))}
+          <div className="overflow-hidden grid grid-cols-2 sm:grid-cols-3 gap-5 space-y-7 mt-3">
+            {[smHeroImage2, smHeroImage3, smHeroImage4, smHeroImage5].map(
+              (ele, i) => (
+                <div className="" key={i}>
+                  <img
+                    src={ele}
+                    alt=".image"
+                    className="md:h-[12rem] md:w-[12rem] w-[10rem] h-[10rem] lg:hidden bg-cover bg-center rounded-lg border mx-auto"
+                  />
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
